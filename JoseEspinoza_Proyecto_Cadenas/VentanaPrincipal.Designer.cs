@@ -1,4 +1,6 @@
-﻿namespace JoseEspinoza_Proyecto_Cadenas
+﻿using System.Windows.Forms;
+
+namespace JoseEspinoza_Proyecto_Cadenas
 {
     partial class VentanaPrincipal
     {
@@ -79,10 +81,11 @@
             // 
             this.botonOpcionesTop.Location = new System.Drawing.Point(303, 6);
             this.botonOpcionesTop.Name = "botonOpcionesTop";
-            this.botonOpcionesTop.Size = new System.Drawing.Size(140, 24);
+            this.botonOpcionesTop.Size = new System.Drawing.Size(140, 28);
             this.botonOpcionesTop.TabIndex = 1;
             this.botonOpcionesTop.Text = "Activar opciones";
             this.botonOpcionesTop.UseVisualStyleBackColor = true;
+            this.botonOpcionesTop.Click += new System.EventHandler(this.botonOpcionesTop_Click);
             // 
             // campoPalabra
             // 
@@ -90,7 +93,7 @@
             this.campoPalabra.Location = new System.Drawing.Point(107, 11);
             this.campoPalabra.Multiline = true;
             this.campoPalabra.Name = "campoPalabra";
-            this.campoPalabra.Size = new System.Drawing.Size(156, 19);
+            this.campoPalabra.Size = new System.Drawing.Size(156, 25);
             this.campoPalabra.TabIndex = 2;
             // 
             // grupoResultados
@@ -111,6 +114,7 @@
             this.campoResultados.Location = new System.Drawing.Point(28, 21);
             this.campoResultados.Multiline = true;
             this.campoResultados.Name = "campoResultados";
+            this.campoResultados.ReadOnly = true;
             this.campoResultados.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.campoResultados.Size = new System.Drawing.Size(401, 83);
             this.campoResultados.TabIndex = 0;
@@ -123,6 +127,7 @@
             this.grupoOperaciones.Controls.Add(this.botonInverso);
             this.grupoOperaciones.Controls.Add(this.botonLetraxLetra);
             this.grupoOperaciones.Controls.Add(this.botonComparar);
+            this.grupoOperaciones.Enabled = false;
             this.grupoOperaciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grupoOperaciones.Location = new System.Drawing.Point(29, 50);
             this.grupoOperaciones.Name = "grupoOperaciones";
@@ -199,6 +204,7 @@
             // 
             // botonResetTop
             // 
+            this.botonResetTop.Enabled = false;
             this.botonResetTop.ForeColor = System.Drawing.Color.Blue;
             this.botonResetTop.Location = new System.Drawing.Point(454, 173);
             this.botonResetTop.Name = "botonResetTop";
@@ -206,6 +212,7 @@
             this.botonResetTop.TabIndex = 5;
             this.botonResetTop.Text = "Resetear";
             this.botonResetTop.UseVisualStyleBackColor = true;
+            this.botonResetTop.Click += new System.EventHandler(this.botonResetTop_Click);
             // 
             // panel1
             // 
@@ -242,6 +249,7 @@
             this.campoResultados2.Location = new System.Drawing.Point(25, 21);
             this.campoResultados2.Multiline = true;
             this.campoResultados2.Name = "campoResultados2";
+            this.campoResultados2.ReadOnly = true;
             this.campoResultados2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.campoResultados2.Size = new System.Drawing.Size(404, 176);
             this.campoResultados2.TabIndex = 0;
@@ -320,15 +328,18 @@
             // 
             // botonResetBot
             // 
+            this.botonResetBot.Enabled = false;
             this.botonResetBot.Location = new System.Drawing.Point(454, 591);
             this.botonResetBot.Name = "botonResetBot";
             this.botonResetBot.Size = new System.Drawing.Size(99, 25);
             this.botonResetBot.TabIndex = 17;
             this.botonResetBot.Text = "Resetear";
             this.botonResetBot.UseVisualStyleBackColor = true;
+            this.botonResetBot.Click += new System.EventHandler(this.botonResetBot_Click);
             // 
             // botonPalabraxPalabra
             // 
+            this.botonPalabraxPalabra.Enabled = false;
             this.botonPalabraxPalabra.ForeColor = System.Drawing.Color.Blue;
             this.botonPalabraxPalabra.Location = new System.Drawing.Point(503, 486);
             this.botonPalabraxPalabra.Name = "botonPalabraxPalabra";
@@ -339,6 +350,7 @@
             // 
             // botonMapVocales
             // 
+            this.botonMapVocales.Enabled = false;
             this.botonMapVocales.ForeColor = System.Drawing.Color.Blue;
             this.botonMapVocales.Location = new System.Drawing.Point(757, 486);
             this.botonMapVocales.Name = "botonMapVocales";
@@ -349,6 +361,7 @@
             // 
             // botonMapConsonantes
             // 
+            this.botonMapConsonantes.Enabled = false;
             this.botonMapConsonantes.ForeColor = System.Drawing.Color.Blue;
             this.botonMapConsonantes.Location = new System.Drawing.Point(757, 528);
             this.botonMapConsonantes.Name = "botonMapConsonantes";
@@ -359,6 +372,7 @@
             // 
             // botonPalabraInversa
             // 
+            this.botonPalabraInversa.Enabled = false;
             this.botonPalabraInversa.ForeColor = System.Drawing.Color.Blue;
             this.botonPalabraInversa.Location = new System.Drawing.Point(503, 528);
             this.botonPalabraInversa.Name = "botonPalabraInversa";
@@ -366,7 +380,6 @@
             this.botonPalabraInversa.TabIndex = 20;
             this.botonPalabraInversa.Text = "Imprimir palabra por palabra la inversa";
             this.botonPalabraInversa.UseVisualStyleBackColor = true;
-            this.botonPalabraInversa.Click += new System.EventHandler(this.button15_Click);
             // 
             // botonOpcionesBot
             // 
@@ -376,9 +389,11 @@
             this.botonOpcionesBot.TabIndex = 22;
             this.botonOpcionesBot.Text = "Activar opciones";
             this.botonOpcionesBot.UseVisualStyleBackColor = true;
+            this.botonOpcionesBot.Click += new System.EventHandler(this.botonOpcionesBot_Click);
             // 
             // botonContar
             // 
+            this.botonContar.Enabled = false;
             this.botonContar.ForeColor = System.Drawing.Color.Blue;
             this.botonContar.Location = new System.Drawing.Point(38, 487);
             this.botonContar.Name = "botonContar";
@@ -465,6 +480,65 @@
         private System.Windows.Forms.Button boton1Letra;
         private System.Windows.Forms.Button botonInverso;
         private System.Windows.Forms.Button botonLetraxLetra;
+
+        public void activaOpcionesTop()
+        {
+
+            if (string.IsNullOrWhiteSpace(campoPalabra.Text))
+            {
+                MessageBox.Show("Debe introducir una palabra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                campoPalabra.Focus();
+            }
+            else
+            {
+                grupoOperaciones.Enabled = true;
+                botonResetTop.Enabled = true;
+                campoPalabra.Enabled = false;
+            }
+        }
+        public void activaOpcionesBot()
+        {
+            if (string.IsNullOrWhiteSpace(campoTexto.Text))
+            {
+                MessageBox.Show("Debe introducir un texto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                campoTexto.Focus();
+            }
+            else
+            {
+                botonContar.Enabled = true;
+                botonPalabraxPalabra.Enabled = true;
+                botonPalabraInversa.Enabled = true;
+                botonMapVocales.Enabled = true;
+                botonMapConsonantes.Enabled = true;
+                botonResetBot.Enabled = true;
+                campoTexto.Enabled = false;
+            }
+        }
+        public void resetearTop()
+        {
+            campoPalabra.Clear();
+            campoPalabra.Enabled = true;
+            campoResultados.Clear();
+            botonResetTop.Enabled = false;
+            grupoOperaciones.Enabled = false;
+            campoPalabra.Focus();
+        }
+        public void resetearBot()
+        {
+            campoTexto.Clear();
+            campoTexto.Enabled = true;
+            campoResultados2.Clear();
+            labelPalabras.Text = "";
+            labelVocales.Text = "";
+            labelConsonantes.Text = "";
+            botonContar.Enabled = false;
+            botonPalabraxPalabra.Enabled = false;
+            botonPalabraInversa.Enabled = false;
+            botonMapVocales.Enabled = false;
+            botonMapConsonantes.Enabled = false;
+            botonResetBot.Enabled = false;
+            campoTexto.Focus();
+        }
     }
 }
 

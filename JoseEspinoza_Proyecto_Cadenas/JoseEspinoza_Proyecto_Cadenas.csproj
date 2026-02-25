@@ -78,6 +78,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Palabra.cs" />
+    <Compile Include="Texto.cs" />
     <Compile Include="VentanaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

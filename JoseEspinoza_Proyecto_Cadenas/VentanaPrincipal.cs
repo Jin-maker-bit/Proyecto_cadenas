@@ -17,9 +17,25 @@ namespace JoseEspinoza_Proyecto_Cadenas
             InitializeComponent();
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void botonOpcionesTop_Click(object sender, EventArgs e)
         {
+            activaOpcionesTop();
+        }
 
+        private void botonOpcionesBot_Click(object sender, EventArgs e)
+        {
+            activaOpcionesBot();
+        }
+
+        private void botonResetTop_Click(object sender, EventArgs e)
+        {
+            resetearTop();
+        }
+
+        private void botonResetBot_Click(object sender, EventArgs e)
+        {
+            resetearBot();
         }
     }
 }
+
