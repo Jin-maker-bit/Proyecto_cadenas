@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace JoseEspinoza_Proyecto_Cadenas
 {
-    public partial class Form1 : Form
+    public partial class VentanaPrincipal : Form
     {
-        public Form1()
+        public VentanaPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
