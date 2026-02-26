@@ -116,7 +116,7 @@ namespace JoseEspinoza_Proyecto_Cadenas
             this.campoResultados.Name = "campoResultados";
             this.campoResultados.ReadOnly = true;
             this.campoResultados.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.campoResultados.Size = new System.Drawing.Size(401, 83);
+            this.campoResultados.Size = new System.Drawing.Size(401, 87);
             this.campoResultados.TabIndex = 0;
             // 
             // grupoOperaciones
@@ -140,12 +140,13 @@ namespace JoseEspinoza_Proyecto_Cadenas
             // 
             this.botonPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonPosicion.ForeColor = System.Drawing.Color.Blue;
-            this.botonPosicion.Location = new System.Drawing.Point(302, 21);
+            this.botonPosicion.Location = new System.Drawing.Point(291, 21);
             this.botonPosicion.Name = "botonPosicion";
-            this.botonPosicion.Size = new System.Drawing.Size(150, 25);
+            this.botonPosicion.Size = new System.Drawing.Size(161, 25);
             this.botonPosicion.TabIndex = 8;
             this.botonPosicion.Text = "Posición letra";
             this.botonPosicion.UseVisualStyleBackColor = true;
+            this.botonPosicion.Click += new System.EventHandler(this.botonPosicion_Click);
             // 
             // botonReves
             // 
@@ -153,10 +154,11 @@ namespace JoseEspinoza_Proyecto_Cadenas
             this.botonReves.ForeColor = System.Drawing.Color.Blue;
             this.botonReves.Location = new System.Drawing.Point(156, 21);
             this.botonReves.Name = "botonReves";
-            this.botonReves.Size = new System.Drawing.Size(137, 25);
+            this.botonReves.Size = new System.Drawing.Size(129, 25);
             this.botonReves.TabIndex = 7;
             this.botonReves.Text = "Imprimir al revés";
             this.botonReves.UseVisualStyleBackColor = true;
+            this.botonReves.Click += new System.EventHandler(this.botonReves_Click);
             // 
             // boton1Letra
             // 
@@ -168,39 +170,43 @@ namespace JoseEspinoza_Proyecto_Cadenas
             this.boton1Letra.TabIndex = 6;
             this.boton1Letra.Text = "Letra 1 y final";
             this.boton1Letra.UseVisualStyleBackColor = true;
+            this.boton1Letra.Click += new System.EventHandler(this.boton1Letra_Click);
             // 
             // botonInverso
             // 
             this.botonInverso.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonInverso.ForeColor = System.Drawing.Color.Blue;
-            this.botonInverso.Location = new System.Drawing.Point(302, 58);
+            this.botonInverso.Location = new System.Drawing.Point(291, 62);
             this.botonInverso.Name = "botonInverso";
-            this.botonInverso.Size = new System.Drawing.Size(150, 25);
+            this.botonInverso.Size = new System.Drawing.Size(161, 25);
             this.botonInverso.TabIndex = 5;
             this.botonInverso.Text = "Letra por letra inverso";
             this.botonInverso.UseVisualStyleBackColor = true;
+            this.botonInverso.Click += new System.EventHandler(this.botonInverso_Click);
             // 
             // botonLetraxLetra
             // 
             this.botonLetraxLetra.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonLetraxLetra.ForeColor = System.Drawing.Color.Blue;
-            this.botonLetraxLetra.Location = new System.Drawing.Point(156, 58);
+            this.botonLetraxLetra.Location = new System.Drawing.Point(156, 62);
             this.botonLetraxLetra.Name = "botonLetraxLetra";
-            this.botonLetraxLetra.Size = new System.Drawing.Size(137, 25);
+            this.botonLetraxLetra.Size = new System.Drawing.Size(129, 25);
             this.botonLetraxLetra.TabIndex = 4;
             this.botonLetraxLetra.Text = "Letra por letra";
             this.botonLetraxLetra.UseVisualStyleBackColor = true;
+            this.botonLetraxLetra.Click += new System.EventHandler(this.botonLetraxLetra_Click);
             // 
             // botonComparar
             // 
             this.botonComparar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonComparar.ForeColor = System.Drawing.Color.Blue;
-            this.botonComparar.Location = new System.Drawing.Point(13, 58);
+            this.botonComparar.Location = new System.Drawing.Point(13, 62);
             this.botonComparar.Name = "botonComparar";
             this.botonComparar.Size = new System.Drawing.Size(135, 25);
             this.botonComparar.TabIndex = 3;
             this.botonComparar.Text = "Comparar palabra";
             this.botonComparar.UseVisualStyleBackColor = true;
+            this.botonComparar.Click += new System.EventHandler(this.botonComparar_Click);
             // 
             // botonResetTop
             // 
