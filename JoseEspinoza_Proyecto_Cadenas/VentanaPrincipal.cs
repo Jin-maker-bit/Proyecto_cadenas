@@ -52,7 +52,7 @@ namespace JoseEspinoza_Proyecto_Cadenas
 
         private void botonPosicion_Click(object sender, EventArgs e)
         {
-            /*string numeroTecleado = Interaction.InputBox("Introduce un número", "Buscar posición de la letra", "");
+           /*string numeroTecleado = Interaction.InputBox("Introduce un número", "Buscar posición de la letra", "");
             string resultado = Palabra.posicionLetra(campoPalabra.Text, numeroTecleado);
             campoResultados.Text = "La posición " + numeroTecleado + " es: " + resultado;*/
             string numeroTecleado = Interaction.InputBox("Introduce un número", "Buscar posición de letra", "");
