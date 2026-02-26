@@ -288,7 +288,7 @@ namespace JoseEspinoza_Proyecto_Cadenas
             this.labelPalabras.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPalabras.Location = new System.Drawing.Point(116, 528);
             this.labelPalabras.Name = "labelPalabras";
-            this.labelPalabras.Size = new System.Drawing.Size(34, 33);
+            this.labelPalabras.Size = new System.Drawing.Size(49, 33);
             this.labelPalabras.TabIndex = 12;
             this.labelPalabras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -298,7 +298,7 @@ namespace JoseEspinoza_Proyecto_Cadenas
             this.labelVocales.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVocales.Location = new System.Drawing.Point(252, 528);
             this.labelVocales.Name = "labelVocales";
-            this.labelVocales.Size = new System.Drawing.Size(34, 33);
+            this.labelVocales.Size = new System.Drawing.Size(51, 33);
             this.labelVocales.TabIndex = 14;
             this.labelVocales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -318,7 +318,7 @@ namespace JoseEspinoza_Proyecto_Cadenas
             this.labelConsonantes.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConsonantes.Location = new System.Drawing.Point(418, 528);
             this.labelConsonantes.Name = "labelConsonantes";
-            this.labelConsonantes.Size = new System.Drawing.Size(34, 33);
+            this.labelConsonantes.Size = new System.Drawing.Size(49, 33);
             this.labelConsonantes.TabIndex = 16;
             this.labelConsonantes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -347,12 +347,13 @@ namespace JoseEspinoza_Proyecto_Cadenas
             // 
             this.botonPalabraxPalabra.Enabled = false;
             this.botonPalabraxPalabra.ForeColor = System.Drawing.Color.Blue;
-            this.botonPalabraxPalabra.Location = new System.Drawing.Point(503, 486);
+            this.botonPalabraxPalabra.Location = new System.Drawing.Point(486, 486);
             this.botonPalabraxPalabra.Name = "botonPalabraxPalabra";
-            this.botonPalabraxPalabra.Size = new System.Drawing.Size(248, 25);
+            this.botonPalabraxPalabra.Size = new System.Drawing.Size(265, 25);
             this.botonPalabraxPalabra.TabIndex = 18;
             this.botonPalabraxPalabra.Text = "Imprimir palabra por palabra";
             this.botonPalabraxPalabra.UseVisualStyleBackColor = true;
+            this.botonPalabraxPalabra.Click += new System.EventHandler(this.botonPalabraxPalabra_Click);
             // 
             // botonMapVocales
             // 
@@ -360,10 +361,11 @@ namespace JoseEspinoza_Proyecto_Cadenas
             this.botonMapVocales.ForeColor = System.Drawing.Color.Blue;
             this.botonMapVocales.Location = new System.Drawing.Point(757, 486);
             this.botonMapVocales.Name = "botonMapVocales";
-            this.botonMapVocales.Size = new System.Drawing.Size(248, 25);
+            this.botonMapVocales.Size = new System.Drawing.Size(226, 25);
             this.botonMapVocales.TabIndex = 19;
             this.botonMapVocales.Text = "Mapa de vocales";
             this.botonMapVocales.UseVisualStyleBackColor = true;
+            this.botonMapVocales.Click += new System.EventHandler(this.botonMapVocales_Click);
             // 
             // botonMapConsonantes
             // 
@@ -371,21 +373,23 @@ namespace JoseEspinoza_Proyecto_Cadenas
             this.botonMapConsonantes.ForeColor = System.Drawing.Color.Blue;
             this.botonMapConsonantes.Location = new System.Drawing.Point(757, 528);
             this.botonMapConsonantes.Name = "botonMapConsonantes";
-            this.botonMapConsonantes.Size = new System.Drawing.Size(248, 25);
+            this.botonMapConsonantes.Size = new System.Drawing.Size(226, 25);
             this.botonMapConsonantes.TabIndex = 21;
             this.botonMapConsonantes.Text = "Mapa de consonantes";
             this.botonMapConsonantes.UseVisualStyleBackColor = true;
+            this.botonMapConsonantes.Click += new System.EventHandler(this.botonMapConsonantes_Click);
             // 
             // botonPalabraInversa
             // 
             this.botonPalabraInversa.Enabled = false;
             this.botonPalabraInversa.ForeColor = System.Drawing.Color.Blue;
-            this.botonPalabraInversa.Location = new System.Drawing.Point(503, 528);
+            this.botonPalabraInversa.Location = new System.Drawing.Point(486, 527);
             this.botonPalabraInversa.Name = "botonPalabraInversa";
-            this.botonPalabraInversa.Size = new System.Drawing.Size(248, 25);
+            this.botonPalabraInversa.Size = new System.Drawing.Size(265, 25);
             this.botonPalabraInversa.TabIndex = 20;
             this.botonPalabraInversa.Text = "Imprimir palabra por palabra la inversa";
             this.botonPalabraInversa.UseVisualStyleBackColor = true;
+            this.botonPalabraInversa.Click += new System.EventHandler(this.botonPalabraInversa_Click);
             // 
             // botonOpcionesBot
             // 
@@ -407,6 +411,7 @@ namespace JoseEspinoza_Proyecto_Cadenas
             this.botonContar.TabIndex = 23;
             this.botonContar.Text = "Acción contar";
             this.botonContar.UseVisualStyleBackColor = true;
+            this.botonContar.Click += new System.EventHandler(this.botonContar_Click);
             // 
             // VentanaPrincipal
             // 
