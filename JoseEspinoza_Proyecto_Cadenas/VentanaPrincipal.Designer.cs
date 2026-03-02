@@ -526,31 +526,34 @@ namespace JoseEspinoza_Proyecto_Cadenas
         private System.Windows.Forms.Button botonInverso;
         private System.Windows.Forms.Button botonLetraxLetra;
 
+        /// <summary>
+        /// Valida que el campo de palabra no esté vacío y habilita las operaciones superiores.
+        /// </summary>
         public void activaOpcionesTop()
         {
-
             if (string.IsNullOrWhiteSpace(campoPalabra.Text))
             {
-                MessageBox.Show("Debe introducir una palabra en el campo PALABRA", "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Debe introducir una palabra en el campo PALABRA", "Error de entrada",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 campoPalabra.Focus();
             }
             else
             {
                 grupoOperaciones.Enabled = true;
                 botonResetTop.Enabled = true;
-                campoPalabra.Enabled = false;
-              
+                campoPalabra.Enabled = false; // Bloqueamos para evitar cambios durante la operación
             }
         }
+
+        /// <summary>
+        /// Valida el bloque de texto y habilita las funciones de análisis (conteo, mapas, etc.).
+        /// </summary>
         public void activaOpcionesBot()
         {
             if (string.IsNullOrWhiteSpace(campoTexto.Text))
             {
-                MessageBox.Show("Debe introducir un texto en el campo TEXTO", "Error", 
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Debe introducir un texto en el campo TEXTO", "Error de entrada",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 campoTexto.Focus();
             }
             else
@@ -564,6 +567,10 @@ namespace JoseEspinoza_Proyecto_Cadenas
                 campoTexto.Enabled = false;
             }
         }
+
+        /// <summary>
+        /// Limpia todos los campos y controles de la sección de Palabras (Parte superior).
+        /// </summary>
         public void resetearTop()
         {
             campoPalabra.Clear();
@@ -573,23 +580,32 @@ namespace JoseEspinoza_Proyecto_Cadenas
             grupoOperaciones.Enabled = false;
             campoPalabra.Focus();
         }
+
+        /// <summary>
+        /// Limpia todos los campos, etiquetas de conteo y controles de la sección de Texto (Parte nferior).
+        /// </summary>
         public void resetearBot()
         {
+            // 1. Limpieza de entradas y salidas
             campoTexto.Clear();
             campoTexto.Enabled = true;
             campoResultados2.Clear();
-            labelPalabras.Text = "";
-            labelVocales.Text = "";
-            labelConsonantes.Text = "";
+
+            // 2. Limpieza de etiquetas de estadísticas
+            labelPalabras.Text = string.Empty;
+            labelVocales.Text = string.Empty;
+            labelConsonantes.Text = string.Empty;
+
+            // 3. Deshabilitar botones de acción hasta nueva entrada
             botonContar.Enabled = false;
             botonPalabraxPalabra.Enabled = false;
             botonPalabraInversa.Enabled = false;
             botonMapVocales.Enabled = false;
             botonMapConsonantes.Enabled = false;
             botonResetBot.Enabled = false;
+
             campoTexto.Focus();
         }
-
         private Label labelVocales;
         private Label labelConsonantes;
     }

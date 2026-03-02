@@ -34,42 +34,42 @@ namespace JoseEspinoza_Proyecto_Cadenas
 
         private void boton1Letra_Click(object sender, EventArgs e)
         {
-            string resultado = PrimeraLetrayFinal(campoPalabra.Text);
-            campoResultados.Text = resultado;
+            campoResultados.Text = PrimeraLetrayFinal(campoPalabra.Text);
+            
         }
 
         private void botonReves_Click(object sender, EventArgs e)
         {
-            string reves = imprimirAlreves(campoPalabra.Text);
-            campoResultados.Text = reves;
+            campoResultados.Text = imprimirAlreves(campoPalabra.Text);
+           
         }
 
         private void botonPosicion_Click(object sender, EventArgs e)
         {
-           /*string numeroTecleado = Interaction.InputBox("Introduce un número", "Buscar posición de la letra", "");
-            string resultado = Palabra.posicionLetra(campoPalabra.Text, numeroTecleado);
-            campoResultados.Text = "La posición " + numeroTecleado + " es: " + resultado;*/
-            string numeroTecleado = Interaction.InputBox("Introduce un número", "Buscar posición de letra", "");
-
-            if (!string.IsNullOrEmpty(numeroTecleado))
-            {
-                string resultado = posicionLetra(campoPalabra.Text, numeroTecleado);
-                if (string.IsNullOrEmpty(resultado))
-                {
-                    MessageBox.Show("Error: La posición introducida no es válida o está fuera de rango.",
-                                    "Error de Posición",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                }
-                else
-                {
-                    campoResultados.Text = "La letra en la posición " + numeroTecleado + " es: " + resultado;
-                }
-            }
+            campoResultados.Text = posicionLetra(campoPalabra.Text);
+            //Este código es como se debéria haber realizado correctamente, hacer aqui todo lo correspondiente a lo que se imprimra en la interfaz.
+            /*
+             if (!string.IsNullOrEmpty(numeroTecleado))
+             {
+                 string resultado = posicionLetra(campoPalabra.Text, numeroTecleado);
+                 if (string.IsNullOrEmpty(resultado))
+                 {
+                     MessageBox.Show("Error: La posición introducida no es válida o está fuera de rango.",
+                                     "Error de Posición",
+                                     MessageBoxButtons.OK,
+                                     MessageBoxIcon.Error);
+                 }
+                 else
+                 {
+                     campoResultados.Text = "La letra en la posición " + numeroTecleado + " es: " + resultado;
+                 }
+             }*/
         }
 
         private void botonComparar_Click(object sender, EventArgs e)
         {
+            campoResultados.Text = CompararPalabras(campoPalabra.Text);
+            /*
             string resultado = CompararPalabras(campoPalabra.Text);
             campoResultados.Text = resultado;
             if (string.IsNullOrEmpty(resultado))
@@ -78,26 +78,27 @@ namespace JoseEspinoza_Proyecto_Cadenas
                         "Error",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void botonLetraxLetra_Click(object sender, EventArgs e)
         {
-            campoResultados.Text = ImprimeLetraPorLetra(campoPalabra.Text);
+           campoResultados.Text = ImprimeLetraPorLetra(campoPalabra.Text);
         }
 
         private void botonInverso_Click(object sender, EventArgs e)
         {
-            campoResultados.Text = ImprimeLetraPorLetraInverso(campoPalabra.Text);
+           campoResultados.Text = ImprimeLetraPorLetraInverso(campoPalabra.Text);
         }
 
         private void botonContar_Click(object sender, EventArgs e)
         {
             string texto = campoTexto.Text;
 
-            labelPalabras.Text = contarPalabras(texto).ToString();
-            labelVocales.Text = contarVocales(texto).ToString();
-            labelConsonantes.Text = contarConsonantes(texto).ToString();
+             labelPalabras.Text = contarPalabras(texto).ToString();
+             labelVocales.Text = contarVocales(texto).ToString();
+             labelConsonantes.Text = contarConsonantes(texto).ToString();
+            
         }
 
         private void botonPalabraxPalabra_Click(object sender, EventArgs e)
@@ -107,17 +108,17 @@ namespace JoseEspinoza_Proyecto_Cadenas
 
         private void botonPalabraInversa_Click(object sender, EventArgs e)
         {
-            campoResultados2.Text = imprimePalabraxPalabraInverso(campoTexto.Text);
+           campoResultados2.Text = imprimirPalabraxPalabraInverso(campoTexto.Text);
         }
 
         private void botonMapVocales_Click(object sender, EventArgs e)
         {
-            campoResultados2.Text = mapaVocales(campoTexto.Text);
+           campoResultados2.Text = mapaVocales(campoTexto.Text);
         }
 
         private void botonMapConsonantes_Click(object sender, EventArgs e)
         {
-            campoResultados2.Text = mapaConsonantes(campoTexto.Text);
+           campoResultados2.Text = mapaConsonantes(campoTexto.Text);
         }
     }
 }
